@@ -1,6 +1,6 @@
 ---
-title: "Next.js 블로그의 핵심: MDX와 Frontmatter 파이프라인 분석"
-description: "gray-matter를 이용한 메타데이터 추출부터 next-mdx-remote를 활용한 RSC 기반 렌더링, 그리고 커스텀 컴포넌트 주입까지의 전체 기술 스택을 상세히 분석합니다."
+title: "MDX와 Frontmatter"
+description: "gray-matter를 이용한 메타데이터 추출부터 next-mdx-remote를 활용한 RSC 기반 렌더링, 그리고 커스텀 컴포넌트 주입까지의 전체 기술 스택을 정리했습니다."
 category: "tech"
 tags: ["nextjs", "mdx", "blog", "architecture"]
 date: "2026-02-12T05:30:00.000Z"
