@@ -24,7 +24,11 @@ export default async function Home() {
               <Link href="/posts">모든 글 보기</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="https://github.com" target="_blank" rel="noreferrer">
+              <Link
+                href="https://github.com/JichanPark12"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </Link>
             </Button>

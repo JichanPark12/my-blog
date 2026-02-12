@@ -1,53 +1,32 @@
 {
-  "aaa": {
-    "path": "posts\\abc\\aaa.md",
-    "category": "abc",
-    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
-    "date": "2026-02-12T02:09:58.857Z",
-    "lastModified": "2026-02-12T02:10:00.302Z",
-    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
-    "tags": [
-      "nextjs",
-      "react",
-      "blog",
-      "optimization",
-      "shadcn",
-      "vibe-coding"
-    ],
-    "thumbnail": "/images/blog-review-thumbnail.jpg"
-  },
-  "test": {
-    "path": "posts\\tech\\test.md",
+  "architecture-decisions": {
+    "path": "posts\\tech\\architecture-decisions.md",
     "category": "tech",
-    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
-    "date": "2026-02-12T02:04:36.926Z",
-    "lastModified": "2026-02-12T02:04:42.167Z",
-    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
+    "title": "블로그 아키텍처 의사결정: O(1) 조회 성능과 카테고리 구조",
+    "date": "2026-02-12T02:48:21.828Z",
+    "lastModified": "2026-02-12T02:49:03.007Z",
+    "description": "파일 시스템 기반 블로그의 성능 한계를 극복하기 위한 O(1) 인덱싱 전략과, 폴더 구조 기반 카테고리 시스템의 장단점 및 의사결정 과정을 공유합니다.",
     "tags": [
-      "nextjs",
-      "react",
-      "blog",
+      "architecture",
       "optimization",
-      "shadcn",
-      "vibe-coding"
-    ],
-    "thumbnail": "/images/blog-review-thumbnail.jpg"
+      "nextjs",
+      "decision-record"
+    ]
   },
-  "building-this-blog": {
-    "path": "posts\\tech\\building-this-blog.md",
+  "how-we-built-this": {
+    "path": "posts\\tech\\how-we-built-this.md",
     "category": "tech",
-    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
-    "date": "2026-02-12T01:48:52.575Z",
-    "lastModified": "2026-02-12T01:54:29.828Z",
-    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
+    "title": "Next.js 16 및 Tailwind CSS v4 기반 블로그 아키텍처 기술 명세",
+    "date": "2026-02-12T02:30:38.236Z",
+    "lastModified": "2026-02-12T02:41:41.467Z",
+    "description": "React 19, Next.js 16 Canary, Tailwind CSS v4를 도입하여 구축한 기술 블로그의 아키텍처 결정 사항과 성능 최적화 방법론을 기술합니다.",
     "tags": [
       "nextjs",
       "react",
-      "blog",
-      "optimization",
-      "shadcn",
+      "tailwind",
+      "architecture",
       "vibe-coding"
     ],
-    "thumbnail": "/images/blog-review-thumbnail.jpg"
+    "thumbnail": "/images/blog-architecture-thumbnail.jpg"
   }
 }

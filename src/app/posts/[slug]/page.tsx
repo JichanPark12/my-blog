@@ -72,7 +72,7 @@ export default async function PostPage(props: PostPageProps) {
   }
 
   return (
-    <article className="container max-w-3xl py-6 lg:py-10">
+    <article className="container max-w-3xl mx-auto py-6 lg:py-10">
       <div>
         <div className="flex items-center gap-2 mb-4">
           <div className="flex items-center gap-2 mb-4">
