@@ -3,6 +3,8 @@ title: "블로그 아키텍처 의사결정: O(1) 조회 성능과 카테고리 
 description: "파일 시스템 기반 블로그의 성능 한계를 극복하기 위한 O(1) 인덱싱 전략과, 폴더 구조 기반 카테고리 시스템의 장단점 및 의사결정 과정을 공유합니다."
 category: "tech"
 tags: ["architecture", "optimization", "nextjs", "decision-record"]
+date: "2026-02-12T02:48:21.828Z"
+lastModified: "2026-02-12T02:49:03.007Z"
 ---
 
 ## 1. 데이터 접근 계층 최적화: O(N)에서 O(1)로

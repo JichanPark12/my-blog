@@ -3,6 +3,8 @@ title: "Next.js 16 및 Tailwind CSS v4 기반 블로그 아키텍처 기술 명�
 description: "React 19, Next.js 16 Canary, Tailwind CSS v4를 도입하여 구축한 기술 블로그의 아키텍처 결정 사항과 성능 최적화 방법론을 기술합니다."
 category: "tech"
 tags: ["nextjs", "react", "tailwind", "architecture", "vibe-coding"]
+date: "2026-02-12T02:30:38.236Z"
+lastModified: "2026-02-12T03:01:32.951Z"
 ---
 
 ## 1. 기술 스택 (Tech Stack)

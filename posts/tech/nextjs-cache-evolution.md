@@ -3,6 +3,8 @@ title: "Next.js 캐싱의 진화: unstable_cache에서 use cache까지"
 description: "Next.js의 캐싱 전략 변화 과정과 'use cache' 지시어의 등장 배경, 그리고 이를 실제 프로젝트에 어떻게 적용하는지 심도 있게 다룹니다."
 category: "tech"
 tags: ["nextjs", "caching", "performance", "react"]
+date: "2026-02-12T03:08:01.368Z"
+lastModified: "2026-02-12T03:28:20.682Z"
 ---
 
 Next.js를 사용하면서 가장 혼란스럽고도 중요한 부분이 바로 **캐싱(Caching)**입니다.

@@ -51,13 +51,19 @@ async function generateMap() {
 
       return {
         slug,
-        date: stat.birthtime.getTime(), // 미리 숫자로
+        date: data.date
+          ? new Date(data.date).getTime()
+          : stat.birthtime.getTime(),
         postData: {
           path: relativePath,
           category: category === "." ? "etc" : category,
           title: data.title || slug,
-          date: stat.birthtime.toISOString(),
-          lastModified: stat.mtime.toISOString(),
+          date: data.date
+            ? new Date(data.date).toISOString()
+            : stat.birthtime.toISOString(),
+          lastModified: data.lastModified
+            ? new Date(data.lastModified).toISOString()
+            : stat.mtime.toISOString(),
           description: data.description || "",
           tags: data.tags || [],
           thumbnail: data.thumbnail,
