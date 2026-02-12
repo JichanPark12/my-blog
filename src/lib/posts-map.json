@@ -1,0 +1,53 @@
+{
+  "aaa": {
+    "path": "posts\\abc\\aaa.md",
+    "category": "abc",
+    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
+    "date": "2026-02-12T02:09:58.857Z",
+    "lastModified": "2026-02-12T02:10:00.302Z",
+    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
+    "tags": [
+      "nextjs",
+      "react",
+      "blog",
+      "optimization",
+      "shadcn",
+      "vibe-coding"
+    ],
+    "thumbnail": "/images/blog-review-thumbnail.jpg"
+  },
+  "test": {
+    "path": "posts\\tech\\test.md",
+    "category": "tech",
+    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
+    "date": "2026-02-12T02:04:36.926Z",
+    "lastModified": "2026-02-12T02:04:42.167Z",
+    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
+    "tags": [
+      "nextjs",
+      "react",
+      "blog",
+      "optimization",
+      "shadcn",
+      "vibe-coding"
+    ],
+    "thumbnail": "/images/blog-review-thumbnail.jpg"
+  },
+  "building-this-blog": {
+    "path": "posts\\tech\\building-this-blog.md",
+    "category": "tech",
+    "title": "Next.js로 나만의 최적화된 블로그 만들기 (with. 바이브 코딩)",
+    "date": "2026-02-12T01:48:52.575Z",
+    "lastModified": "2026-02-12T01:54:29.828Z",
+    "description": "Next.js 14, Shadcn UI, 그리고 커스텀 마크다운 인덱싱 시스템을 활용하여 고성능 테크 블로그를 구축한 과정을 공유합니다.",
+    "tags": [
+      "nextjs",
+      "react",
+      "blog",
+      "optimization",
+      "shadcn",
+      "vibe-coding"
+    ],
+    "thumbnail": "/images/blog-review-thumbnail.jpg"
+  }
+}
