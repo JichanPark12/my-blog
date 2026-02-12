@@ -6,9 +6,6 @@ tags: ["nextjs", "react", "tailwind", "architecture", "vibe-coding"]
 thumbnail: "/images/blog-architecture-thumbnail.jpg"
 ---
 
-본 문서는 본 블로그를 구성하는 기술 스택과 아키텍처에 대한 기술 명세입니다.
-최신 기술인 **Next.js 16 (Canary)**의 도입 배경 및 이를 활용한 성능 최적화 전략을 중점적으로 다룹니다.
-
 ## 1. 기술 스택 (Tech Stack)
 
 본 프로젝트는 최신 웹 기술의 선제적 도입과 검증을 목표로 구성되었습니다.
