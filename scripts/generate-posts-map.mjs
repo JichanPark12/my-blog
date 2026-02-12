@@ -31,58 +31,51 @@ async function getPostFiles(dir) {
 async function generateMap() {
   console.log("Generating posts map...");
 
-  // Ensure output directory exists (src/lib)
   const outputDir = path.dirname(OUTPUT_FILE);
-  try {
-    await fs.access(outputDir);
-  } catch {
-    await fs.mkdir(outputDir, { recursive: true });
-  }
+  await fs.mkdir(outputDir, { recursive: true }).catch(() => {});
 
   const files = await getPostFiles(POSTS_DIR);
-  const postsMap = {};
 
-  for (const filePath of files) {
-    const fileContent = await fs.readFile(filePath, "utf-8");
-    const { data } = matter(fileContent);
-    const slug = path.basename(filePath, path.extname(filePath));
-    const stat = await fs.stat(filePath);
+  const posts = await Promise.all(
+    files.map(async (filePath) => {
+      const [fileContent, stat] = await Promise.all([
+        fs.readFile(filePath, "utf-8"),
+        fs.stat(filePath),
+      ]);
 
-    // Relative path for storage (smaller size)
-    const relativePath = path.relative(path.join(__dirname, ".."), filePath);
+      const { data } = matter(fileContent);
+      const slug = path.basename(filePath, path.extname(filePath));
+      const relativePath = path.relative(path.join(__dirname, ".."), filePath);
+      const relativePathFromPosts = path.relative(POSTS_DIR, filePath);
+      const category = path.dirname(relativePathFromPosts).split(path.sep)[0];
 
-    // Extract category from directory name (single level)
-    const relativePathFromPosts = path.relative(POSTS_DIR, filePath);
-    const category = path.dirname(relativePathFromPosts).split(path.sep)[0];
+      return {
+        slug,
+        date: stat.birthtime.getTime(), // 미리 숫자로
+        postData: {
+          path: relativePath,
+          category: category === "." ? "etc" : category,
+          title: data.title || slug,
+          date: stat.birthtime.toISOString(),
+          lastModified: stat.mtime.toISOString(),
+          description: data.description || "",
+          tags: data.tags || [],
+          thumbnail: data.thumbnail,
+        },
+      };
+    }),
+  );
 
-    postsMap[slug] = {
-      path: relativePath,
-      category: category === "." ? "etc" : category,
-      title: data.title || slug,
-      date: stat.birthtime.toISOString(),
-      lastModified: stat.mtime.toISOString(),
-      description: data.description || "",
-      tags: data.tags || [],
-      thumbnail: data.thumbnail,
-    };
-  }
-
-  // Sort by date descending (optional, but good for default ordering)
-  const sortedSlugs = Object.keys(postsMap).sort((a, b) => {
-    return (
-      new Date(postsMap[b].date).getTime() -
-      new Date(postsMap[a].date).getTime()
-    );
-  });
-
-  const sortedMap = {};
-  sortedSlugs.forEach((slug) => {
-    sortedMap[slug] = postsMap[slug];
-  });
+  // 정렬하면서 바로 객체 생성
+  const sortedMap = Object.fromEntries(
+    posts
+      .sort((a, b) => b.date - a.date)
+      .map(({ slug, postData }) => [slug, postData]),
+  );
 
   await fs.writeFile(OUTPUT_FILE, JSON.stringify(sortedMap, null, 2));
   console.log(
-    `Successfully generated posts map at ${OUTPUT_FILE} with ${Object.keys(postsMap).length} posts.`,
+    `Successfully generated posts map at ${OUTPUT_FILE} with ${posts.length} posts.`,
   );
 }
 
