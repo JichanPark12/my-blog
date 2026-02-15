@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ModeToggle } from "@/components/mode-toggle";
+import { cn } from "@/lib/utils";
+
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto px-4 flex h-14 items-center">
@@ -11,13 +18,23 @@ export function Header() {
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <Link
               href="/posts"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname?.startsWith("/posts")
+                  ? "text-foreground"
+                  : "text-foreground/60",
+              )}
             >
               Posts
             </Link>
             <Link
               href="/categories"
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname?.startsWith("/categories")
+                  ? "text-foreground"
+                  : "text-foreground/60",
+              )}
             >
               Categories
             </Link>
